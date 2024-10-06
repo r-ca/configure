@@ -11,6 +11,7 @@ zinit light zsh-users/zsh-syntax-highlighting
 
 # Other
 setopt AUTO_PARAM_KEYS
+setopt PROMPT_SUBST # 毎回プロンプトを再評価
 
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
