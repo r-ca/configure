@@ -9,3 +9,5 @@ else
     echo "Unknown/Invalid/Unset prompt mode: $rca_shell_prompt_mode"
     source $ZSH_D/prompt/sonanoka.zsh
 fi
+
+export PROMPT=`left-prompt`
