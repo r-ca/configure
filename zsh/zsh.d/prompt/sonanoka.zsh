@@ -1,6 +1,6 @@
 function left-prompt {
     local name_t='254m%}'
-    local arch_t='250m%}'
+    local gray_t='250m%}'
     local name_b='176m%}'
     local path_t='252m%}'
     local path_b='140m%}'
@@ -18,5 +18,5 @@ function left-prompt {
 
     local _host=""
 
-    echo -e "${user}$(prompt_uname)@%m${text_color}${arch_t}(${arch})${back_color}${path_b}${text_color}${name_b}${sharp} ${dir}%~${reset}${text_color}${path_b}${sharp}${reset}\n${text_color}${arrow}⊂(ﾟヮﾟ)⊃ > ${reset}"
+    echo -e "${user}$(prompt_uname "${text_color}${gray_t}(Git:" ")")${text_color}${name_t}@%m${text_color}${gray_t}(${arch})${back_color}${path_b}${text_color}${name_b}${sharp} ${dir}%~${reset}${text_color}${path_b}${sharp}${reset}\n${text_color}${arrow}⊂(ﾟヮﾟ)⊃ > ${reset}"
 }
