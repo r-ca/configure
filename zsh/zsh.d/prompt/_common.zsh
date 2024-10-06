@@ -1,12 +1,11 @@
-function pre_uname() {
+function prompt_uname() {
     local git_uname=`git config user.name`
     local current_uname=`print -P %n`
 
-    if [ -n "$git_uname" ] && [ "$git_uname" != "$current_uname" ];
-        export rca_shell_prompt_git_user_section=" (${git_uname})"
-    else 
-        export rca_shell_prompt_git_user_section=""
+    if [ -n "$git_uname" ] && [ "$git_uname" != "$current_uname" ]; then
+        echo -e "${current_uname}(git:${git_uname})"
+    else
+        echo -e "${current_uname}"
     fi
 }
 
-add-zsh-hook precmd pre_uname

@@ -14,9 +14,9 @@ function left-prompt {
     user="${back_color}${name_b}${text_color}${name_t}"
     dir="${back_color}${path_b}${text_color}${path_t}"
 
-    # Split
-    local _user="${user}%n"
-    local _host="%m${text_color}${arch_t}(${arch})"
+    local _user=""
 
-    echo -e "${_user}@${_host}${back_color}${path_b}${text_color}${name_b}${sharp} ${dir}%~${reset}${text_color}${path_b}${sharp}${reset}\n${text_color}${arrow}⊂(ﾟヮﾟ)⊃ > ${reset}"
+    local _host=""
+
+    echo -e "${user}$(prompt_uname)@%m${text_color}${arch_t}(${arch})${back_color}${path_b}${text_color}${name_b}${sharp} ${dir}%~${reset}${text_color}${path_b}${sharp}${reset}\n${text_color}${arrow}⊂(ﾟヮﾟ)⊃ > ${reset}"
 }

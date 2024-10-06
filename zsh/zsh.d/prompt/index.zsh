@@ -1,3 +1,4 @@
+source $ZSH_D/prompt/_common.zsh
 if [ "$rca_shell_prompt_mode" = "normal" ]; then
     source $ZSH_D/prompt/sonanoka.zsh
 elif [ "$rca_shell_prompt_mode" = "presentation" ]; then
@@ -10,4 +11,4 @@ else
     source $ZSH_D/prompt/sonanoka.zsh
 fi
 
-export PROMPT=`left-prompt`
+export PROMPT='$(left-prompt)'
