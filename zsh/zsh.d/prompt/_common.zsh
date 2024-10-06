@@ -3,6 +3,11 @@ function prompt_uname() {
     local current_uname=`print -P %n`
 
     if [ -n "$git_uname" ] && [ "$git_uname" != "$current_uname" ]; then
+        if [ $# -eq 2 ]; then
+            echo -e "${current_uname}$1${git_uname}$2"
+        else # fallback
+            echo -e "${current_uname}(git:${git_uname})"
+        fi
         echo -e "${current_uname}(git:${git_uname})"
     else
         echo -e "${current_uname}"
