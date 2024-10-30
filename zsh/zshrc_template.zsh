@@ -2,7 +2,9 @@
 export ZSH_D=$HOME/.zsh.d
 
 # Set prompt
-export rca_shell_prompt_mode=normal
+if [ -z "$rca_shell_prompt_mode" ]; then
+    export rca_shell_prompt_mode=normal
+fi
 
 # Common
 source "$ZSH_D/bootstrap.zsh"
